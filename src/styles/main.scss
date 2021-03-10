@@ -1,0 +1,700 @@
+@import "reset";
+@import "variables";
+@import "home";
+@import "portfolio";
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+  background: $oliveGreen;
+  height: 100%;
+}
+
+.primary-btn {
+  background: $oliveGreen;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  padding: 12px 27px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background: black;
+  }
+}
+
+.ghost-btn {
+  border: 2px solid $oliveGreen;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  text-align: center;
+  color: $oliveGreen;
+  padding: 12px 27px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+    border-color: black;
+  }
+}
+
+#menu {
+  background: black;
+  position: fixed;
+  transform: translate3d(-100%, 0, 0);
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  top: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 2s ease-in-out;
+
+  nav {
+    width: 400px;
+    text-align: center;
+
+    a {
+      font-size: 2.3rem;
+      padding: 1rem;
+      display: block;
+      text-decoration: none;
+      color: $mintCream;
+
+      &:hover {
+        color: $blueColor;
+      }
+    }
+  }
+}
+
+.menu-active {
+  .menu-icon {
+    .fa {
+      color: white;
+    }
+  }
+  #menu {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .home {
+    .logo {
+      opacity: 0;
+      background: black;
+      height: 100px;
+      width: 200px;
+    }
+
+    .info-section {
+      padding: 54px;
+      width: 35%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      .info-box {
+        color: black;
+        position: absolute;
+        margin-left: 59px;
+        bottom: 9px;
+        h4 {
+          font-size: 12px;
+          color: black;
+          margin: 0;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 12px;
+          color: black;
+          margin: 0.2rem 0 1rem;
+        }
+
+        .icon-section {
+          font-size: 19px;
+
+          a {
+            color: $oliveGreen;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .content-area {
+      margin-left: 25%;
+      width: 80%;
+      background: white;
+      height: 105%;
+      // padding: 0 0 0 25%;
+
+      .profile-section {
+        vertical-align: top;
+        display: inline-block;
+        padding-top: 66%;
+        padding-left: 11%;
+
+        .profile {
+          height: 300px;
+          max-width: 500px;
+          h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            word-spacing: -6px;
+
+            span {
+              color: $oliveGreen;
+            }
+          }
+
+          h5 {
+            font-weight: 500;
+            padding-left: 2px;
+            font-size: 1rem;
+            margin: 0 0 1.4rem;
+            word-spacing: -6px;
+          }
+
+          p {
+            color: rgb(46, 42, 42);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .primary-btn {
+    background: $oliveGreen;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 9px;
+  }
+
+  .ghost-btn {
+    border: 2px solid $oliveGreen;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: $oliveGreen;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .home {
+    .logo {
+      opacity: 0;
+      background: black;
+      height: 100px;
+      width: 200px;
+    }
+
+    .info-section {
+      padding: 54px;
+      width: 35%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      .info-box {
+        color: black;
+        position: absolute;
+        margin-left: 97px;
+        bottom: 12px;
+        h4 {
+          font-size: 0.8rem;
+          color: black;
+          margin: 0;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: black;
+          margin: 0.2rem 0 1rem;
+        }
+
+        .icon-section {
+          font-size: 19px;
+
+          a {
+            color: $oliveGreen;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .content-area {
+      margin-left: 25%;
+      width: 80%;
+      background: white;
+      height: 105%;
+      // padding: 0 0 0 25%;
+
+      .profile-section {
+        vertical-align: top;
+        display: inline-block;
+        padding-top: 75%;
+        padding-left: 17%;
+
+        .profile {
+          height: 300px;
+          max-width: 500px;
+          h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            word-spacing: -6px;
+
+            span {
+              color: $oliveGreen;
+            }
+          }
+
+          h5 {
+            font-weight: 500;
+            padding-left: 2px;
+            font-size: 1rem;
+            margin: 0 0 1.4rem;
+            word-spacing: -6px;
+          }
+
+          p {
+            color: rgb(46, 42, 42);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger-icon {
+    position: fixed;
+    right: 0;
+    .fa,
+    .fas {
+      font-size: 2rem;
+      color: black;
+    }
+  }
+
+  .primary-btn {
+    background: $oliveGreen;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 9px;
+  }
+
+  .ghost-btn {
+    border: 2px solid $oliveGreen;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: $oliveGreen;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .home {
+    .logo {
+      opacity: 0;
+      background: black;
+      height: 100px;
+      width: 200px;
+    }
+
+    .info-section {
+      padding: 54px;
+      width: 35%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      .info-box {
+        color: black;
+        position: absolute;
+        margin-left: 97px;
+        bottom: 60px;
+        h4 {
+          font-size: 0.8rem;
+          color: black;
+          margin: 0;
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: black;
+          margin: 0.2rem 0 1rem;
+        }
+
+        .icon-section {
+          font-size: 19px;
+
+          a {
+            color: $oliveGreen;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .content-area {
+      margin-left: 25%;
+      width: 80%;
+      background: white;
+      height: 105%;
+      // padding: 0 0 0 25%;
+
+      .profile-section {
+        vertical-align: top;
+        display: inline-block;
+        padding-top: 86%;
+        padding-left: 17%;
+
+        .profile {
+          height: 300px;
+          max-width: 500px;
+          h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            word-spacing: -6px;
+
+            span {
+              color: $oliveGreen;
+            }
+          }
+
+          h5 {
+            font-weight: 500;
+            padding-left: 2px;
+            font-size: 1rem;
+            margin: 0 0 1.4rem;
+            word-spacing: -6px;
+          }
+
+          p {
+            color: rgb(46, 42, 42);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .primary-btn {
+    background: $oliveGreen;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 9px;
+  }
+
+  .ghost-btn {
+    border: 2px solid $oliveGreen;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: $oliveGreen;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .home {
+    .logo {
+      background: black;
+      height: 100px;
+      width: 200px;
+    }
+
+    .hamburger-icon {
+      position: fixed;
+      right: 36px;
+      top: 36px;
+      padding: 20px;
+
+      .fa,
+      .fas {
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+
+    .info-section {
+      // padding: 504px;
+      // width: 35%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      .info-box {
+        color: black;
+        position: absolute;
+        margin-left: 97px;
+        bottom: 60px;
+        h4 {
+          font-size: 0.8rem;
+          color: black;
+          margin: 0;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: black;
+          margin: 0.2rem 0 1rem;
+        }
+
+        .icon-section {
+          font-size: 19px;
+
+          a {
+            color: $oliveGreen;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .content-area {
+      margin-left: 25%;
+      width: 80%;
+      background: white;
+      height: 105%;
+      // padding: 0 0 0 25%;
+
+      .profile-section {
+        vertical-align: top;
+        display: inline-block;
+        padding-top: 94%;
+        padding-left: 17%;
+
+        .profile {
+          height: 300px;
+          max-width: 500px;
+          h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            word-spacing: -6px;
+
+            span {
+              color: $oliveGreen;
+            }
+          }
+
+          h5 {
+            font-weight: 500;
+            padding-left: 2px;
+            font-size: 1rem;
+            margin: 0 0 1.4rem;
+            word-spacing: -6px;
+          }
+
+          p {
+            color: rgb(46, 42, 42);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .primary-btn {
+    background: $oliveGreen;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 9px;
+  }
+
+  .ghost-btn {
+    border: 2px solid $oliveGreen;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: $oliveGreen;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
